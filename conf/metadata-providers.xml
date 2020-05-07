@@ -1,0 +1,3 @@
+<!--  addition to metadata-providers.xml -->
+<MetadataProvider id="LocalHWBMetadata"	xsi:type="FilesystemMetadataProvider" 	metadataFile="%{idp.home}/metadata/HWB-Metadata.xml"></MetadataProvider>
+<!--  end of additions to metadata-providers.xml -->

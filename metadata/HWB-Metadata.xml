@@ -1,0 +1,25 @@
+<!--  you need to get your own SAML2 file from HWB -->
+<!-- they are available from https://whateveryourcollegelogin.hwb.gov.wales/Saml2 -->
+<!-- you can then the file you download to here -->
+<!-- the file shown is just an example you cannot use it on your server without modification -->
+<EntityDescriptor ID="_RANDOM_GENERATED_GUID_HERE" entityID="https://yourcollegelogin.hwb.gov.wales/Saml2" cacheDuration="PT1H" xmlns:saml2="urn:oasis:names:tc:SAML:2.0:assertion" xmlns="urn:oasis:names:tc:SAML:2.0:metadata">
+	<SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol">
+		<AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://yourcollegelogin.hwb.gov.wales/Saml2/Acs" index="0" isDefault="true" />
+		<AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Artifact" Location="https://yourcollegelogin.hwb.gov.wales/Saml2/Acs" index="1" isDefault="false" />
+		<AttributeConsumingService index="0" isDefault="true">
+			<ServiceName xml:lang="en">Saml2</ServiceName>
+			<RequestedAttribute Name="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name" isRequired="true" FriendlyName="Username (globally unique identifier)" />
+			<RequestedAttribute Name="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress" isRequired="true" FriendlyName="Email Address" />
+			<RequestedAttribute Name="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname" isRequired="true" FriendlyName="Given Name" />
+			<RequestedAttribute Name="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname" isRequired="true" FriendlyName="Last Name" />
+		</AttributeConsumingService>
+	</SPSSODescriptor>
+	<Organization>
+		<OrganizationName xml:lang="en-GB">Hwb</OrganizationName>
+		<OrganizationDisplayName xml:lang="en-GB">Hwb</OrganizationDisplayName>
+		<OrganizationURL xml:lang="en-GB">https://yourcollegelogin.hwb.gov.wales/</OrganizationURL>
+	</Organization>
+	<ContactPerson contactType="support">
+		<EmailAddress>support@fqdn.co.uk</EmailAddress>
+	</ContactPerson>
+</EntityDescriptor>

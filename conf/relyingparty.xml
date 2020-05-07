@@ -1,0 +1,17 @@
+<!-- you need to put this in the RelyingPartyOverrides section -->
+<!-- <util:list id="shibboleth.RelyingPartyOverrides"-->
+<bean parent="RelyingPartyByName" c:relyingPartyIds="https://yourcollegelogin.hwb.gov.wales/Saml2">
+  <property name="profileConfigurations">
+    <list>
+      <bean parent="SAML2.SSO" p:encryptAssertions="false"
+      p:signResponses="false" p:signAssertions="true"
+      p:nameIDFormatPrecedence="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" />
+      <ref bean="SAML2.ECP" />
+      <ref bean="SAML2.Logout" />
+      <ref bean="SAML2.AttributeQuery" />
+      <ref bean="SAML2.ArtifactResolution" />
+      <ref bean="Liberty.SSOS" />
+    </list>
+  </property>
+</bean>
+<!--  end of additions to relyingparty.xml -->

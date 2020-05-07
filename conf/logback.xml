@@ -1,0 +1,21 @@
+<!--  example settings for DEBUG logging -->
+<!--  Logging level shortcuts. -->
+<variable name="idp.loglevel.idp" value="DEBUG" />
+<variable name="idp.loglevel.ldap" value="DEBUG" />
+<variable name="idp.loglevel.messages" value="DEBUG" />
+<variable name="idp.loglevel.encryption" value="DEBUG" />
+<variable name="idp.loglevel.opensaml" value="DEBUG" />
+<variable name="idp.loglevel.props" value="DEBUG" />
+<!--  end of changes to logback.xml -->
+
+<!--  here is the original configuration incase you didnt save it! -->
+<!--  actually this is what is on our server, so may not be default logging configuration -->
+<!--
+<!-- Logging level shortcuts. -->
+<variable name="idp.loglevel.idp" value="INFO" />
+<variable name="idp.loglevel.ldap" value="WARN" />
+<variable name="idp.loglevel.messages" value="INFO" />
+<variable name="idp.loglevel.encryption" value="INFO" />
+<variable name="idp.loglevel.opensaml" value="WARN" />
+<variable name="idp.loglevel.props" value="INFO" />
+-->

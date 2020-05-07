@@ -1,0 +1,40 @@
+<!--  start of additions to attribute-filter.xml  -->
+<AttributeFilterPolicy id="HWB-attributefilter">
+  <PolicyRequirementRule xsi:type="OR">
+    <Rule xsi:type="Requester" value="https://yourcollegelogin.hwb.gov.wales/Saml2" />
+  </PolicyRequirementRule>
+  <AttributeRule attributeID="name">
+    <PermitValueRule xsi:type="ANY" />
+  </AttributeRule>
+  <AttributeRule attributeID="emailaddress">
+    <PermitValueRule xsi:type="ANY" />
+  </AttributeRule>
+  <AttributeRule attributeID="givenname">
+    <PermitValueRule xsi:type="ANY" />
+  </AttributeRule>
+  <AttributeRule attributeID="surname">
+    <PermitValueRule xsi:type="ANY" />
+  </AttributeRule>
+  <AttributeRule attributeID="displayName">
+    <DenyValueRule xsi:type="ANY" />
+  </AttributeRule>
+  <AttributeRule attributeID="sn">
+    <DenyValueRule xsi:type="ANY" />
+  </AttributeRule>
+  <AttributeRule attributeID="mail">
+    <DenyValueRule xsi:type="ANY" />
+  </AttributeRule>
+  <AttributeRule attributeID="eduPersonScopedAffiliation">
+    <DenyValueRule xsi:type="ANY" />
+  </AttributeRule>
+  <AttributeRule attributeID="eduPersonTargetedID">
+    <DenyValueRule xsi:type="ANY" />
+  </AttributeRule>
+  <AttributeRule attributeID="eduPersonPrincipalName">
+    <DenyValueRule xsi:type="ANY" />
+  </AttributeRule>
+  <AttributeRule attributeID="eduPersonTargetedID.old">
+    <DenyValueRule xsi:type="ANY" />
+  </AttributeRule>
+</AttributeFilterPolicy>
+<!--  end of additions to attribute-filter.xml for HWB-->

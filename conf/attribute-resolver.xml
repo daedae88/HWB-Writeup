@@ -1,0 +1,22 @@
+<!--  Additions to attribute-resolver.xml -->
+<resolver:AttributeDefinition xsi:type="ad:Scoped" id="name" scope="%{idp.scope}" sourceAttributeID="sAMAccountName">
+	<resolver:Dependency ref="myLDAP" />
+	<resolver:AttributeEncoder xsi:type="enc:SAML1ScopedString" name="urn:mace:dir:attribute-def:name" encodeType="false"  />
+	<resolver:AttributeEncoder xsi:type="enc:SAML2ScopedString" name="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name" friendlyName="Username (globally unique identifier)" encodeType="false"  />
+</resolver:AttributeDefinition>
+<resolver:AttributeDefinition xsi:type="ad:Simple" id="emailaddress" sourceAttributeID="mail">
+	<resolver:Dependency ref="myLDAP" />
+	<resolver:AttributeEncoder xsi:type="enc:SAML1String" name="urn:mace:dir:attribute-def:emailaddressl" encodeType="false" />
+	<resolver:AttributeEncoder xsi:type="enc:SAML2String" name="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/emailaddress" friendlyName="Email Address" encodeType="false" />
+</resolver:AttributeDefinition>
+<resolver:AttributeDefinition xsi:type="ad:Simple" id="surname" sourceAttributeID="sn">
+	<resolver:Dependency ref="myLDAP" />
+	<resolver:AttributeEncoder xsi:type="enc:SAML1String" name="urn:mace:dir:attribute-def:surname" encodeType="false" />
+	<resolver:AttributeEncoder xsi:type="enc:SAML2String" name="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/surname" friendlyName="Last Name" encodeType="false" />
+</resolver:AttributeDefinition>
+<resolver:AttributeDefinition xsi:type="ad:Simple" id="givenname" sourceAttributeID="givenName">
+	<resolver:Dependency ref="myLDAP" />
+	<resolver:AttributeEncoder xsi:type="enc:SAML1String" name="urn:mace:dir:attribute-def:givenname" encodeType="false" />
+	<resolver:AttributeEncoder xsi:type="enc:SAML2String" name="http://schemas.xmlsoap.org/ws/2005/05/identity/claims/givenname" friendlyName="Given Name" encodeType="false" />
+</resolver:AttributeDefinition>
+<!-- end of additions to attribute-resolver.xml  -->
