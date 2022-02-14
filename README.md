@@ -1,3 +1,7 @@
+14/02/22 - just a little update
+  this configuration works fine on Shibboleth IDP Version 4
+  ## that is all
+
 07/05/20 - Shibboleth IDP setup for Wales HWB access
 
 This is a write up for anyone in Wales that wants to use Welsh Government HWB facility and they want to use their own Shibboleth server for authentication.
